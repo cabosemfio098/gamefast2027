@@ -1,0 +1,632 @@
+
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080812;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.secao {
+    padding: 100px 9%;
+}
+
+strong {
+    color: #a855f7;
+}
+
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+.cabecalho {
+    width: 100%;
+    padding: 22px 7%;
+    background: #0d0d1b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #252044;
+    position: relative;
+    z-index: 10;
+}
+
+.logo,
+.rodape-logo {
+    font-size: 21px;
+    font-weight: 900;
+    color: white;
+}
+
+.logo span,
+.rodape-logo span {
+    color: #a855f7;
+}
+
+.logo small,
+.rodape-logo small {
+    display: block;
+    color: #24b9ff;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.menu {
+    display: flex;
+    gap: 28px;
+}
+
+.menu a {
+    color: #d5d5e5;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #a855f7;
+}
+
+.botao-menu {
+    padding: 11px 22px;
+    background: #7628c9;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-menu:hover {
+    background: #24a8ed;
+}
+
+
+/* =================================
+   BANNER PRINCIPAL
+================================= */
+
+.hero {
+    min-height: 650px;
+    padding: 100px 9%;
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 80% 30%, #302052 0%, transparent 35%),
+        radial-gradient(circle at 10% 80%, #102a49 0%, transparent 35%),
+        linear-gradient(120deg, #080812, #111027);
+
+    border-bottom: 1px solid #292044;
+}
+
+.hero-conteudo {
+    max-width: 850px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #36c5ff;
+    border: 1px solid #36c5ff;
+    padding: 7px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.15;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #a855f7;
+    text-shadow: 0 0 25px #7628c9;
+}
+
+.hero-conteudo > p {
+    color: #c1c1d1;
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 35px;
+}
+
+.hero-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.botao-principal,
+.botao-secundario {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-principal {
+    background: linear-gradient(90deg, #7628c9, #a855f7);
+    color: white;
+}
+
+.botao-principal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #7628c9;
+}
+
+.botao-secundario {
+    border: 1px solid #36baff;
+    color: #36baff;
+}
+
+.botao-secundario:hover {
+    background: #36baff;
+    color: #080812;
+}
+
+.hero-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 55px;
+    margin-top: 65px;
+}
+
+.hero-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-info strong {
+    color: white;
+    font-size: 22px;
+}
+
+.hero-info span {
+    color: #88889f;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+
+/* =================================
+   TÍTULOS DAS SEÇÕES
+================================= */
+
+.titulo-secao {
+    margin-bottom: 45px;
+}
+
+.titulo-secao > span,
+.local-texto > span,
+.contato > span {
+    color: #32baff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.titulo-secao h2 {
+    font-size: 38px;
+    line-height: 1.3;
+    margin-top: 12px;
+}
+
+.titulo-secao p {
+    color: #a5a5bb;
+    margin-top: 12px;
+}
+
+.centralizado {
+    text-align: center;
+}
+
+
+/* =================================
+   SOBRE O EVENTO
+================================= */
+
+.sobre {
+    background: #0d0d1b;
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.sobre-texto p {
+    color: #b8b8c9;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.sobre-destaque {
+    padding: 40px;
+    background: linear-gradient(135deg, #21133c, #102238);
+    border: 1px solid #6333a0;
+    border-radius: 12px;
+    box-shadow: 0 0 25px #151027;
+}
+
+.icone-destaque {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.sobre-destaque h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.sobre-destaque p {
+    color: #b8b8c9;
+}
+
+
+/* =================================
+   ATRAÇÕES
+================================= */
+
+.atracoes {
+    background: #080812;
+}
+
+.grade-atracoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card-atracao {
+    background: #111120;
+    padding: 30px;
+    border: 1px solid #29243e;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card-atracao:hover {
+    transform: translateY(-7px);
+    border-color: #a855f7;
+    box-shadow: 0 0 20px #201333;
+}
+
+.card-icone {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.card-atracao h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.card-atracao p {
+    font-size: 14px;
+    color: #a5a5bb;
+}
+
+
+/* =================================
+   PROGRAMAÇÃO
+================================= */
+
+.programacao {
+    background: #0d0d1b;
+}
+
+.lista-programacao {
+    max-width: 900px;
+    margin: auto;
+}
+
+.item-programacao {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    border-bottom: 1px solid #29243e;
+}
+
+.numero {
+    font-size: 25px;
+    font-weight: bold;
+    color: #a855f7;
+}
+
+.item-programacao div {
+    flex: 1;
+}
+
+.item-programacao h3 {
+    font-size: 18px;
+}
+
+.item-programacao p {
+    color: #a5a5bb;
+    font-size: 14px;
+}
+
+.status {
+    color: #36baff;
+    font-size: 12px;
+    border: 1px solid #2479a3;
+    border-radius: 20px;
+    padding: 5px 12px;
+}
+
+.aviso {
+    color: #77778c;
+    font-size: 12px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+
+/* =================================
+   LOCALIZAÇÃO
+================================= */
+
+.localizacao {
+    background: #080812;
+}
+
+.local-card {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 55px;
+    background: linear-gradient(120deg, #19112e, #101d30);
+    border: 1px solid #48316b;
+    border-radius: 12px;
+}
+
+.local-texto h2 {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.local-texto p {
+    color: #b8b8c9;
+    margin-bottom: 18px;
+}
+
+.local-texto .botao-principal {
+    margin-top: 12px;
+}
+
+.local-icone {
+    text-align: center;
+    padding: 35px 15px;
+    background: #111120;
+    border-radius: 10px;
+    border: 1px solid #34304d;
+}
+
+.local-icone span {
+    font-size: 65px;
+}
+
+.local-icone h3 {
+    margin-top: 15px;
+    color: #a855f7;
+}
+
+.local-icone p {
+    color: #36baff;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+/* =================================
+   CONTATO
+================================= */
+
+.contato {
+    text-align: center;
+    background:
+        radial-gradient(circle, #261443 0%, #0d0d1b 70%);
+}
+
+.contato h2 {
+    font-size: 45px;
+    line-height: 1.3;
+    margin: 20px 0;
+}
+
+.contato p {
+    max-width: 550px;
+    margin: 0 auto 30px;
+    color: #b8b8c9;
+}
+
+.contato .botao-principal {
+    margin-top: 5px;
+}
+
+
+/* =================================
+   RODAPÉ
+================================= */
+
+.rodape {
+    background: #090911;
+    text-align: center;
+    padding: 45px 20px 20px;
+    border-top: 1px solid #29243e;
+}
+
+.rodape-logo {
+    margin-bottom: 15px;
+}
+
+.rodape > p {
+    color: #9999ad;
+    font-size: 14px;
+}
+
+.rodape-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.rodape-links a {
+    color: #b8b8c9;
+    font-size: 13px;
+}
+
+.rodape-links a:hover {
+    color: #a855f7;
+}
+
+.rodape-final {
+    border-top: 1px solid #242438;
+    padding-top: 20px;
+    color: #77778c;
+    font-size: 12px;
+}
+
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 900px) {
+
+    .cabecalho {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .sobre-conteudo,
+    .local-card {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-atracoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .secao {
+        padding: 70px 6%;
+    }
+
+    .cabecalho {
+        padding: 18px 6%;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .botao-menu {
+        padding: 9px 13px;
+        font-size: 12px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding: 75px 6%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-conteudo > p {
+        font-size: 15px;
+    }
+
+    .hero-info {
+        gap: 25px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 30px;
+    }
+
+    .grade-atracoes {
+        grid-template-columns: 1fr;
+    }
+
+    .item-programacao {
+        gap: 12px;
+        padding: 20px 5px;
+    }
+
+    .item-programacao h3 {
+        font-size: 15px;
+    }
+
+    .item-programacao p {
+        font-size: 12px;
+    }
+
+    .status {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .local-card {
+        padding: 25px;
+    }
+
+    .local-texto h2 {
+        font-size: 28px;
+    }
+
+    .contato h2 {
+        font-size: 35px;
+    }
+
+}
